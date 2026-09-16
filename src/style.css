@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Finger+Paint&family=Grechen+Fuemen&family=Liu+Jian+Mao+Cao&display=swap');
+
+:root {
+    --verde: rgb(156, 161, 136);
+    --pergaminho: rgb(180, 164, 122);
+    --marrom: rgb(70, 61, 48);
+    --vinho: rgba(73, 21, 21, 0.842);
+    --fonte1: Grechen Fuemen;
+    --fonte2: Liu Jian Mao Cao;
+    --fonte3: Finger Paint;
+}
+
+body {
+    background-image: url(./img/fundo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.logo img {
+    object-fit: cover;
+    height: 100px;
+    width: auto;
+    filter: sepia();
+    transition: transform 0.2s ease-in-out;
+}
+
+.logo img:hover {
+    transform: scale(1.5);
+    filter: drop-shadow(0 5px 2px #000000);
+}
+
+.menu {
+    background-color: var(--vinho);
+    display: flex;
+    position: fixed;
+    margin-top: 15px;
+    padding: 5px 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    filter: drop-shadow(0 0 10px rgb(26, 22, 17));
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 50px;
+    box-sizing: border-box;
+}
+
+nav a{
+    text-align: center;
+    color: var(--pergaminho);
+    text-decoration: none;
+    min-width: 90px;
+    font-family: var(--fonte1);
+    font-size: 21px;
+    transition: transform 0.2s ease-in-out;
+}
+
+nav a:hover {
+    color: rgb(247, 229, 186);
+    transform: scale(1.1);
+}
+
