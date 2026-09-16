@@ -19,6 +19,9 @@ body {
     background-image: url(./img/fundo.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    color: #fff;
+    margin: 0;
+    padding: 0;
 }
 
 .fundo-borrado {
@@ -81,6 +84,12 @@ nav a:hover {
     transform: scale(1.1);
 }
 
+.home {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
 .youkais {
     object-fit: cover;
     height: 70vh;
@@ -113,16 +122,17 @@ nav a:hover {
     filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.836)) brightness(0.7);
 }
 
-.conteiner-fumaça {
-    position: absolute;
+.container-fumaça {
+    position: relative;
     left: 0;
-    top: 90vh;
     display: block;
-    width: 100%;
+    width: 100vw;
+    max-width: 100vw;
     height: auto;
+    margin-top: 5vh;
 }
 
-.conteiner-fumaça::after {
+.container-fumaça::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -131,3 +141,63 @@ nav a:hover {
     height: 20%;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
 }
+
+#historia {
+   margin-top: 0;
+   flex-direction: column;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: black;
+   width: 100vw;
+   box-sizing: border-box;
+   max-width: 100vw;
+   padding: 60px 30px;
+}
+
+.papel1 {
+    grid-area: a;
+    background-image: url(./img/papel1.png);
+    object-fit: cover;
+    height: 100vh;
+    width: auto;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+}
+
+.explicacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 1;
+    position: relative;
+}
+
+.grid-container img {
+    object-fit: cover;
+    height: 50vh;
+    grid-area: b;
+}
+
+.travessia {
+    grid-area: c;
+}
+
+.chamada {
+    grid-area: d;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 15px;
+    grid-template-areas: 
+    "a b c"
+    "a b d";
+}
+
+
