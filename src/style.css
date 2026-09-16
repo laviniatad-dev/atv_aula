@@ -4,10 +4,15 @@
     --verde: rgb(156, 161, 136);
     --pergaminho: rgb(180, 164, 122);
     --marrom: rgb(70, 61, 48);
-    --vinho: rgba(73, 21, 21, 0.842);
+    --vinho: rgba(73, 21, 21, 0.952);
     --fonte1: Grechen Fuemen;
     --fonte2: Liu Jian Mao Cao;
     --fonte3: Finger Paint;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding: 80px;
 }
 
 body {
@@ -48,7 +53,7 @@ body {
     padding: 3px 90px;
     left: 50%;
     transform: translateX(-50%);
-    filter: drop-shadow(0 0 10px rgb(26, 22, 17));
+    box-shadow: 0 0 10px rgb(26, 22, 17);
     z-index: 1000;
 }
 
@@ -76,8 +81,53 @@ nav a:hover {
     transform: scale(1.1);
 }
 
-.banner img {
+.youkais {
     object-fit: cover;
-    height: 60vh;
+    height: 70vh;
     filter: saturate(0.5);
+    display: block;
+    box-shadow: 0 0 70px var(--vinho);
+    border-radius: 20px;
+}
+
+.banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 19vh;
+}
+
+.titulo {
+    height: 25vh;
+    width: auto;
+    z-index: 10;
+    margin-top: -13vh;
+    filter: sepia();
+}
+
+.fumaça {
+    display: block;
+    object-fit: cover;
+    height: auto;
+    width: 100%;
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.836)) brightness(0.7);
+}
+
+.conteiner-fumaça {
+    position: absolute;
+    left: 0;
+    top: 90vh;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.conteiner-fumaça::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
 }
